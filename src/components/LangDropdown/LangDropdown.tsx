@@ -2,14 +2,13 @@
 import {Dropdown, Spinner} from "react-bootstrap";
 import {useTranslation} from "react-i18next";
 import {useState} from "react";
-import {I18N_LANGS} from "../../../../constants/i18n.ts";
+import {I18N_LANGS} from "../../constants/i18n.ts";
 import "./LangDropdown.css";
 
 const LangDropdown = () => {
 
 	const { t, i18n } = useTranslation();
 	const [load, setLoad] = useState<boolean>(false);
-	console.log(i18n)
 
 	const setLang = (lng: string) => {
 		setLoad(true)

@@ -1,0 +1,16 @@
+/*outline button with gradient border*/
+
+/*border gradients btn*/
+.btn-border-gradient {
+    padding: .6em 2.5em;
+    border: solid 3px transparent;
+    border-radius: 100px;
+    background-image: linear-gradient(var(--app-dark), var(--app-dark)), radial-gradient(circle at top left, #FF1CF7, #00F0FF);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    color: var(--bs-white);
+    transition: .25s;
+}
+.btn-border-gradient:hover{
+
+}

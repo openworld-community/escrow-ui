@@ -1,0 +1,38 @@
+.NavbarEscrow{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.NavbarEscrow .left,
+.NavbarEscrow .left .links-container{
+    display: flex;
+    align-items: center;
+}
+.NavbarEscrow .left .links-container{
+    margin-left: 1em;
+}
+
+/*logo*/
+.NavbarEscrow .left .logo{
+    width: 45px;
+    height: auto;
+}
+
+/*links*/
+.NavbarEscrow .left .links-container a{
+    margin: 0 2em;
+    color: var(--app-light-gray);
+    text-decoration: none;
+    transition: .25s;
+}
+.NavbarEscrow .left .links-container a:hover{
+    color: var(--bs-white);
+}
+
+/*button*/
+.NavbarEscrow .right button {
+}

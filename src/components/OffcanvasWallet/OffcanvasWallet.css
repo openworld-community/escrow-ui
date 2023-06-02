@@ -1,0 +1,4 @@
+.OffcanvasWallet.offcanvas {
+    background: var(--offcanvas-bg);
+    color: var(--bs-white);
+}

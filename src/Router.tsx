@@ -1,15 +1,20 @@
-// import React from 'react';
+import React from 'react';
 import {Route, Routes} from "react-router-dom";
-import {PATH_HOME} from "./constants/router.ts";
-import HomePage from "./pages/HomePage/HomePage.tsx";
+import {PATH_ESCROW, PATH_LANDING} from "./constants/router.ts";
+import EscrowPage from "./pages/EscrowPage/EscrowPage.tsx";
 import {IRoute} from "./types/router.ts";
+import LandingPage from "./pages/LandingPage/LandingPage.tsx";
 
-const Router = () => {
+const Router: React.FC = () => {
 
 	const dataRouter: IRoute[] = [
 		{
-			path: PATH_HOME,
-			element: <HomePage />,
+			path: PATH_LANDING,
+			element: <LandingPage />,
+		},
+		{
+			path: PATH_ESCROW,
+			element: <EscrowPage />,
 		},
 	];
 
