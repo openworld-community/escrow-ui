@@ -1,0 +1,75 @@
+/* --------- def-dropdown --------- ( start ) */
+.def-dropdown {
+
+}
+
+/*toggle btn*/
+.def-dropdown .dropdown-toggle{
+    padding: .75em 1em;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #161B21;
+    border-radius: 10px;
+    border: none;
+}
+.def-dropdown.transparent .dropdown-toggle{
+    background: none;
+}
+.def-dropdown .dropdown-toggle:hover,
+.def-dropdown .dropdown-toggle.show{
+    background: #29323D;
+}
+
+/*img*/
+.def-dropdown img{
+    width: 20px;
+    height: 20px;
+    margin-right: .5em;
+    border-radius: 50%;
+}
+
+/*text*/
+.def-dropdown p{
+    margin: 0 .5em 0 0;
+    font-weight: 500;
+    line-height: 1;
+}
+
+/*dropdown-menu show dropdown-menu-end*/
+.def-dropdown .dropdown-menu{
+    /*vars*/
+    --bs-dropdown-min-width: 100%;
+
+    /*styles*/
+    margin-top: 2px;
+    background: #161B21;
+    border: 1px solid #29323D;
+    border-radius: 10px;
+}
+
+.def-dropdown .dropdown-menu a.dropdown-item{
+    width: 90%;
+    margin: auto;
+    padding: 7px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--bs-white);
+    border-radius: inherit;
+    transition: .15s;
+}
+.def-dropdown .dropdown-menu a.dropdown-item p{
+    margin: 0;
+    font-size: 13px;
+    line-height: 1;
+}
+.def-dropdown .dropdown-menu a.dropdown-item:hover{
+    background: #29323D;
+}
+
+/* --------- def-dropdown --------- ( end ) */

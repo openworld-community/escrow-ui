@@ -1,0 +1,98 @@
+.PreviewBlocks{
+    /*vars*/
+    --block-width: 400px;
+    --height: 600px;
+
+    height: var(--height);
+    margin-top: calc(((100vh - var(--height)) / 2) - var(--logo-height));
+
+    color: var(--bs-white);
+
+    display: flex;
+    justify-content: space-between;
+    align-content: stretch;
+}
+
+/*block*/
+.PreviewBlocks .block{
+    width: var(--block-width);
+    height: calc(var(--height) / 3 - 10px);
+    padding: 1px;
+    background: var(--app-border-gradient);
+    border-radius: var(--def-radius);
+}
+
+.PreviewBlocks .block .inner{
+    height: 100%;
+    padding: var(--def-radius);
+    border-radius: inherit;
+    background: var(--app-dark);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*main block*/
+.PreviewBlocks .block.main{
+    width: calc(100% - var(--block-width) - var(--def-radius));
+    height: 100%;
+}
+.PreviewBlocks .block.main .inner{
+    padding: 30px 60px;
+}
+.PreviewBlocks .block.main h2{
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.PreviewBlocks .block.main h2 span{
+    margin: 0 .25em;
+}
+.PreviewBlocks .block.main p{
+    max-width: 80%;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+/*default block*/
+.PreviewBlocks .block h6{
+    margin: 0;
+    font-weight: 700;
+}
+.PreviewBlocks .block h5{
+    margin: .5em 0;
+    font-weight: 700;
+}
+.PreviewBlocks .block p.small{
+    margin: 0;
+    color: var(--app-light-gray);
+    font-weight: 300;
+}
+
+
+/*btns*/
+.PreviewBlocks .block.main .btn-container button{
+    padding: 1em 3em;
+    font-weight: 600;
+}
+.PreviewBlocks .block.main .btn-container button:first-child{
+    margin-right: 1em;
+}
+
+/*text*/
+/*gradient text*/
+.PreviewBlocks .block h6.gradient,
+.PreviewBlocks .block h2 span{
+    max-width: max-content;
+    background: var(--app-primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*right-container*/
+.PreviewBlocks .right-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

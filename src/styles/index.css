@@ -3,7 +3,13 @@
 :root {
     --app-dark: #111;
     --app-light-gray: #A0A0A0;
+    --app-border-gradient: radial-gradient(68.26% 71.18% at 50% 43.4%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    --app-primary-gradient: linear-gradient(94.32deg, #FF1CF7 -0.36%, #00F0FF 98.01%), linear-gradient(93.74deg, #FF1CF7 0.97%, #00F0FF 101.4%);
     --offcanvas-bg: #12151D;
+
+    /*sizes*/
+    --logo-height: 75px;
+    --def-radius: 15px;
 }
 
 * {

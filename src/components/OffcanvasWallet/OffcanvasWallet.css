@@ -1,4 +1,57 @@
 .OffcanvasWallet.offcanvas {
-    background: var(--offcanvas-bg);
+    margin: var(--def-radius);
+    padding: 1px;
+    background: var(--app-border-gradient);
     color: var(--bs-white);
+    border-radius: var(--def-radius);
+}
+
+.OffcanvasWallet.offcanvas .inner{
+    height: 100%;
+    position: relative;
+    background: var(--offcanvas-bg);
+    border-radius: inherit;
+    z-index: 10000;
+}
+
+/*padding*/
+.OffcanvasWallet.offcanvas .offcanvas-header,
+.OffcanvasWallet.offcanvas .offcanvas-body{
+    padding: 0 20px;
+}
+.OffcanvasWallet.offcanvas .offcanvas-header{
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.OffcanvasWallet.offcanvas .offcanvas-header h5{
+    margin: 0;
+    line-height: 1;
+    font-weight: 400;
+}
+.OffcanvasWallet.offcanvas .offcanvas-body{
+    padding-bottom: 40px;
+    padding-top: 20px;
+}
+
+/*btn slider right*/
+.OffcanvasWallet.offcanvas .btn-slide{
+    position: absolute;
+    left: -60px;
+    top: 0;
+    bottom: 0;
+
+    width: 120px;
+    padding: 40px 0 0 20px;
+    background: linear-gradient(180deg, rgba(39, 44, 58, 0.5) 0%, rgba(29, 34, 46, 0.5) 100%);
+    border-radius: var(--def-radius);
+    transition: .15s;
+    opacity: .4;
+    z-index: 1;
+}
+.OffcanvasWallet.offcanvas .btn-slide:hover{
+    cursor: pointer;
+    opacity: .6;
+}
+.OffcanvasWallet.offcanvas .btn-slide img {
+    width: 20px;
 }

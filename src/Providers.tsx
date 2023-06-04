@@ -11,6 +11,7 @@ import store from "./store/store.ts";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./styles/index.css";
 import "./styles/components/buttons.css";
+import "./styles/components/dropdown.css";
 
 const Providers = () => {
 

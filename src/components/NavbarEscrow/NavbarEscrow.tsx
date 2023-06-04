@@ -3,6 +3,7 @@ import "./NavbarEscrow.css";
 import {Link} from "react-router-dom";
 import {useAppDispatch} from "../../store/store.ts";
 import {switchShow} from "../../store/slices/offcanvasWalletSlice.ts";
+import LangDropdown from "../LangDropdown/LangDropdown.tsx";
 
 const NavbarEscrow: React.FC = () => {
 
@@ -23,6 +24,7 @@ const NavbarEscrow: React.FC = () => {
 			</div>
 
 			<div className="right">
+				<LangDropdown />
 				<button onClick={() => dispatch(switchShow())} className="btn-border-gradient">
 					Connect Wallet
 				</button>

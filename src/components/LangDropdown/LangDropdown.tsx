@@ -15,10 +15,22 @@ const LangDropdown = () => {
 		i18n.changeLanguage(lng).finally(() => setLoad(false));
 	};
 
+	console.log(i18n)
+
 	return (
-		<Dropdown className={'LangDropdown'} align={'end'}>
+		<Dropdown className={'LangDropdown def-dropdown transparent'} align={'end'}>
 			<Dropdown.Toggle size={'sm'} disabled={load}>
-				{load ? <Spinner size={'sm'} /> : t('general.lang_title').toUpperCase()}
+				{
+					load ?
+						<Spinner size={'sm'} /> :
+						<>
+							<img
+								src={I18N_LANGS.find(elem => elem.value === i18n.language)?.image}
+								alt={'Language'}
+							/>
+							<p>{t('general.lang_title').toUpperCase()}</p>
+						</>
+				}
 			</Dropdown.Toggle>
 
 			<Dropdown.Menu>
@@ -27,7 +39,8 @@ const LangDropdown = () => {
 						.filter(elem => elem.value !== i18n.language)
 						.map(elem => (
 						<Dropdown.Item key={elem.value} onClick={() => setLang(elem.value)}>
-							{elem.title}
+							<img src={elem.image} alt={elem.title}/>
+							<p>{elem?.title?.toUpperCase()}</p>
 						</Dropdown.Item>
 					))
 				}

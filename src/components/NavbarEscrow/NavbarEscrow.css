@@ -8,6 +8,7 @@
 }
 
 .NavbarEscrow .left,
+.NavbarEscrow .right,
 .NavbarEscrow .left .links-container{
     display: flex;
     align-items: center;
@@ -18,8 +19,7 @@
 
 /*logo*/
 .NavbarEscrow .left .logo{
-    width: 45px;
-    height: auto;
+    height: var(--logo-height);
 }
 
 /*links*/
