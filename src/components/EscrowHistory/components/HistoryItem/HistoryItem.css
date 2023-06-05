@@ -1,0 +1,77 @@
+.HistoryItem{
+    width: 100%;
+    margin-bottom: .5em;
+    padding: 8px;
+    background: var(--app-dark-second);
+    border-radius: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*left container*/
+.HistoryItem .left{
+    display: flex;
+    align-items: center;
+}
+
+/*text*/
+.HistoryItem p{
+    margin: 0;
+}
+.HistoryItem p span{
+    margin-left: .15em;
+    color: rgba(125, 143, 169, 1);
+}
+
+/*arrow circle*/
+.HistoryItem .left .arrow{
+    margin: 0 1em;
+}
+
+/*user*/
+.HistoryItem .user{
+    padding: 10px 15px;
+
+    display: flex;
+    align-items: center;
+
+    background: rgba(41, 50, 61, 1);
+    border-radius: 100px;
+}
+.HistoryItem .user img{
+    width: 25px;
+    margin-right: 10px;
+    border-radius: inherit;
+}
+
+/*options container*/
+.HistoryItem .left .options{
+    margin: 0 2em;
+
+    display: flex;
+}
+.HistoryItem .left .options p{
+    margin: 0 .75em;
+}
+
+
+/*status*/
+.HistoryItem p.status{
+    margin-right: 1.25em;
+}
+.HistoryItem p.status.completed{
+    color: rgba(128, 255, 97, 1);
+}
+.HistoryItem p.status.other{
+    color: rgba(255, 97, 97, 1);
+}
+.HistoryItem p.status.progress{
+    height: auto; /*delete bootstrap*/
+    font-size: 1em; /*delete bootstrap*/
+    background: none; /*delete bootstrap*/
+    color: rgba(125, 143, 169, 1);
+}
+.HistoryItem p.status.rejected{
+    color: rgba(255, 239, 97, 1);
+}

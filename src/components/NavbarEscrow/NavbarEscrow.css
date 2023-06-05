@@ -20,6 +20,10 @@
 /*logo*/
 .NavbarEscrow .left .logo{
     height: var(--logo-height);
+    transition: .25s;
+}
+.NavbarEscrow .left .logo:hover{
+    opacity: .5;
 }
 
 /*links*/

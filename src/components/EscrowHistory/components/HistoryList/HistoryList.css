@@ -1,0 +1,21 @@
+.HistoryList{
+    width: 100%;
+    height: 300px;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.HistoryList::-webkit-scrollbar {
+    width: 6px; /* ширина всей полосы прокрутки */
+    margin-left: 5px;
+}
+.HistoryList::-webkit-scrollbar-track {
+    background: none; /* цвет зоны отслеживания */
+}
+.HistoryList::-webkit-scrollbar-thumb {
+    background-color: var(--app-dark-second); /* цвет бегунка */
+    border-radius: 20px; /* округлось бегунка */
+    border: none; /* отступ вокруг бегунка */
+}

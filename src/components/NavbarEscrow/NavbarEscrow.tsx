@@ -5,6 +5,7 @@ import {useAppDispatch} from "../../store/store.ts";
 import {switchShow} from "../../store/slices/offcanvasWalletSlice.ts";
 import LangDropdown from "../LangDropdown/LangDropdown.tsx";
 import NetworkDropdown from "../NetworkDropdown/NetworkDropdown.tsx";
+import {PATH_ESCROW} from "../../constants/router.ts";
 
 const NavbarEscrow: React.FC = () => {
 
@@ -13,7 +14,9 @@ const NavbarEscrow: React.FC = () => {
 	return (
 		<nav className={"NavbarEscrow"}>
 			<div className="left">
-				<img src="/images/logo.svg" alt="PEREDELANO ESCROW" className={"logo"} />
+				<Link to={PATH_ESCROW}>
+					<img src="/images/logo.svg" alt="PEREDELANO ESCROW" className={"logo"} />
+				</Link>
 
 				<div className={"links-container"}>
 					<Link to={"/"}>Ecosystem</Link>

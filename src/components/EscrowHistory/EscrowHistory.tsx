@@ -2,6 +2,8 @@ import React from 'react';
 import "./EscrowHistory.css";
 import {Link} from "react-router-dom";
 import {PATH_ESCROW} from "../../constants/router.ts";
+import HistoryFilter from "./components/HistoryFilter/HistoryFilter.tsx";
+import HistoryList from "./components/HistoryList/HistoryList.tsx";
 
 const EscrowHistory: React.FC = () => {
 	return (
@@ -13,6 +15,9 @@ const EscrowHistory: React.FC = () => {
 				</Link>
 
 				<h1>Your Escrows</h1>
+
+				<HistoryFilter />
+				<HistoryList />
 			</div>
 		</div>
 	);

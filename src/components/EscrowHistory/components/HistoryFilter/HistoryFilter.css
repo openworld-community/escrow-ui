@@ -1,0 +1,57 @@
+.HistoryFilter{
+    width: 100%;
+    margin-bottom: 2em;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/*block*/
+.HistoryFilter .block{
+    width: calc(100% / 4 - .5em);
+    height: 120px;
+    padding: 1px;
+
+    border-radius: var(--def-radius);
+    background: #29323D;
+    cursor: pointer;
+    transition: .25s;
+}
+.HistoryFilter .block.active{
+    background: var(--app-prinary-gradient-border);
+}
+.HistoryFilter .block:hover .inner{
+    background-color: var(--app-dark);
+}
+
+.HistoryFilter .block .inner{
+    padding: 10px 10%;
+    border-radius: inherit;
+    background-color: var(--app-dark-second);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    transition: .25s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*text*/
+.HistoryFilter .block span {
+    max-width: max-content;
+
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1;
+
+    background: var(--app-primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.HistoryFilter .block h6 {
+    margin: 0;
+    font-weight: 400;
+    color: rgba(125, 143, 169, 1);
+}
