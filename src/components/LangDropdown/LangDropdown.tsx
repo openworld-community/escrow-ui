@@ -15,8 +15,6 @@ const LangDropdown = () => {
 		i18n.changeLanguage(lng).finally(() => setLoad(false));
 	};
 
-	console.log(i18n)
-
 	return (
 		<Dropdown className={'LangDropdown def-dropdown transparent'} align={'end'}>
 			<Dropdown.Toggle size={'sm'} disabled={load}>

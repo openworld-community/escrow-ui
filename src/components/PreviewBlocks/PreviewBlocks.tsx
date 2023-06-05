@@ -1,6 +1,8 @@
 import React from 'react';
 import "./PreviewBlocks.css";
 import {PreviewBlocksData} from "./PreviewBlocksData.ts";
+import {Link} from "react-router-dom";
+import {PATH_ESCROW_MANAGE} from "../../constants/router.ts";
 
 const PreviewBlocks: React.FC = () => {
 	return (
@@ -31,9 +33,11 @@ const PreviewBlocks: React.FC = () => {
 							Create new Escrow
 						</button>
 
-						<button className="btn-border-white">
-							Manage your Escrow
-						</button>
+						<Link to={PATH_ESCROW_MANAGE}>
+							<button className="btn-border-white">
+								Manage your Escrow
+							</button>
+						</Link>
 					</div>
 				</div>
 			</div>

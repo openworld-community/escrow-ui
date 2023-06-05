@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import {useAppDispatch} from "../../store/store.ts";
 import {switchShow} from "../../store/slices/offcanvasWalletSlice.ts";
 import LangDropdown from "../LangDropdown/LangDropdown.tsx";
+import NetworkDropdown from "../NetworkDropdown/NetworkDropdown.tsx";
 
 const NavbarEscrow: React.FC = () => {
 
@@ -24,6 +25,7 @@ const NavbarEscrow: React.FC = () => {
 			</div>
 
 			<div className="right">
+				<NetworkDropdown />
 				<LangDropdown />
 				<button onClick={() => dispatch(switchShow())} className="btn-border-gradient">
 					Connect Wallet

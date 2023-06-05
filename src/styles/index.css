@@ -10,6 +10,8 @@
     /*sizes*/
     --logo-height: 75px;
     --def-radius: 15px;
+    --escrow-padding: 2em 1.5em;
+    --block-main-preview-padding: 30px 60px;
 }
 
 * {

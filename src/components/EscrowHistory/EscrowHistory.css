@@ -1,0 +1,51 @@
+.EscrowHistory{
+    /*vars*/
+    --height: 600px;
+
+    /*styles*/
+    width: 100%;
+    height: var(--height);
+    margin-top: calc(((100vh - var(--height)) / 2) - var(--logo-height));
+    padding: 1px;
+
+    background: var(--app-border-gradient);
+    border-radius: var(--def-radius);
+    color: var(--bs-white);
+}
+
+.EscrowHistory .inner{
+    width: 100%;
+    height: 100%;
+    padding: var(--block-main-preview-padding);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background: var(--app-dark);
+}
+
+/*link get back*/
+.EscrowHistory .inner a.getBack{
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--bs-white);
+    font-weight: 300;
+    transition: .25s;
+}
+.EscrowHistory .inner a.getBack img{
+    width: 14px;
+    margin-right: 6px;
+}
+.EscrowHistory .inner a.getBack:hover{
+    opacity: .5;
+}
+
+/*title h1*/
+.EscrowHistory .inner h1{
+    margin: .25em 0 .5em;
+    font-weight: 700;
+}

@@ -39,7 +39,7 @@
     height: 100%;
 }
 .PreviewBlocks .block.main .inner{
-    padding: 30px 60px;
+    padding: var(--block-main-preview-padding);
 }
 .PreviewBlocks .block.main h2{
     font-weight: 800;
