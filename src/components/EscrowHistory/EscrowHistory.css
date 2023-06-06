@@ -26,26 +26,6 @@
     background: var(--app-dark);
 }
 
-/*link get back*/
-.EscrowHistory .inner a.getBack{
-    text-decoration: none;
-
-    display: flex;
-    align-items: center;
-
-    color: var(--bs-white);
-    font-weight: 300;
-    transition: .25s;
-    opacity: .5;
-}
-.EscrowHistory .inner a.getBack img{
-    width: 14px;
-    margin-right: 6px;
-}
-.EscrowHistory .inner a.getBack:hover{
-    opacity: 1;
-}
-
 /*title h1*/
 .EscrowHistory .inner h1{
     margin: .25em 0 .5em;

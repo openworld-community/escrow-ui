@@ -1,0 +1,20 @@
+/*link get back*/
+.LinkBack{
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--bs-white);
+    font-weight: 300;
+    transition: .25s;
+    opacity: .5;
+}
+.LinkBack img{
+    width: 14px;
+    margin-right: 6px;
+}
+.LinkBack:hover{
+    opacity: 1;
+    color: var(--bs-white);
+}

@@ -1,0 +1,77 @@
+.EscrowCreateForm{
+    width: 100%;
+    margin-top: 2em;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: var(--bs-white);
+}
+
+.EscrowCreateForm .block{
+    height: auto;
+    margin-top: 2em;
+
+    display: flex;
+    flex-direction: column;
+}
+.EscrowCreateForm .block.horizontal{
+    flex-direction: row;
+    align-items: center;
+}
+.EscrowCreateForm .block:nth-child(1),
+.EscrowCreateForm .block:nth-child(2){
+    margin-top: 0;
+}
+
+/*width*/
+.EscrowCreateForm .w20{
+    width: calc(20% - .5em);
+}
+.EscrowCreateForm .w30{
+    width: calc(30% - .5em);
+}
+.EscrowCreateForm .w50{
+    width: calc(50% - .5em);
+}
+.EscrowCreateForm .w100{
+    width: 100%;
+}
+
+/*label*/
+.EscrowCreateForm .block label{
+    margin-bottom: .3em;
+}
+
+/*button*/
+.EscrowCreateForm .btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.EscrowCreateForm .btn-container button{
+    width: 25%;
+    margin: 2em .5em;
+    padding: .75em 3em;
+}
+
+/*inputs*/
+.EscrowCreateForm input.outline-gray-input.ml{
+    margin-right: .35em;
+}
+
+/*block fee*/
+.EscrowCreateForm .block.fee{
+    margin-left: 1em;
+}
+.EscrowCreateForm .block.fee p{
+    margin: -3px 0 0 0;
+    color: #7D8FA9;
+    line-height: 1;
+
+}
+.EscrowCreateForm .block.fee p span{
+    color: var(--bs-white);
+    margin-left: .35em;
+}

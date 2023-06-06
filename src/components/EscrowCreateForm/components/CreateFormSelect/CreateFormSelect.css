@@ -1,0 +1,44 @@
+.CreateFormSelect{
+    display: flex;
+}
+
+/*CreateFormSelect*/
+.CreateFormSelect button{
+    padding: 1px;
+    margin-right: .35em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+
+    color: var(--app-gray-op-25);
+    background: var(--app-gray-op-25);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    transition: .25s;
+}
+.CreateFormSelect button:disabled{
+    background: var(--app-primary-gradient);
+}
+.CreateFormSelect button .inner-btn{
+    width: 100%;
+    padding: .5em;
+    border-radius: inherit;
+    background: var(--app-dark);
+}
+.CreateFormSelect button:disabled{
+    color: var(--bs-white);
+}
+.CreateFormSelect button:last-child{
+    margin-right: 0;
+}
+.CreateFormSelect button:hover{
+    background: var(--bs-white);
+    color: var(--bs-white);
+}
+.CreateFormSelect button:disabled{
+    color: var(--bs-white);
+    background: var(--app-primary-gradient);
+}

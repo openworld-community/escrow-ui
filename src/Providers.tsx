@@ -12,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./styles/index.css";
 import "./styles/components/buttons.css";
 import "./styles/components/dropdown.css";
+import "./styles/components/form.css";
 
 const Providers = () => {
 

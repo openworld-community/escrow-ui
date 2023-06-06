@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
+    --app-gray: #7D8FA9;
+    --app-gray-op-50: rgba(125, 143, 169, 0.5);
+    --app-gray-op-25: rgba(125, 143, 169, 0.25);
     --app-dark: #111;
     --app-dark-second: #161B21;
     --app-light-gray: #A0A0A0;
@@ -10,6 +13,7 @@
     --offcanvas-bg: #12151D;
 
     /*sizes*/
+    --chat-width: 400px;
     --logo-height: 75px;
     --def-radius: 15px;
     --escrow-padding: 2em 1.5em;

@@ -1,0 +1,44 @@
+.EscrowCreateInner{
+    /*vars*/
+    --block-width: 400px;
+    --height: 600px;
+
+    position: relative;
+
+    width: 100%;
+    height: var(--height);
+    margin-top: calc(((100vh - var(--height)) / 2) - var(--logo-height));
+
+    color: var(--bs-white);
+
+    display: flex;
+    justify-content: space-between;
+    align-content: stretch;
+}
+
+/*left*/
+.EscrowCreateInner .left{
+    width: calc(100% - var(--chat-width) - var(--def-radius));
+    padding: 1px;
+    background: var(--app-border-gradient);
+    border-radius: var(--def-radius);
+}
+.EscrowCreateInner .left .inner{
+    width: 100%;
+    height: 100%;
+    padding: var(--block-main-preview-padding);
+    background: var(--app-dark);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*title*/
+.EscrowCreateInner h2.title{
+    font-weight: 700;
+    max-width: max-content;
+    background: var(--app-primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

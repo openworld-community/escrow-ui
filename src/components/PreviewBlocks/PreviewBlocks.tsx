@@ -2,7 +2,7 @@ import React from 'react';
 import "./PreviewBlocks.css";
 import {PreviewBlocksData} from "./PreviewBlocksData.ts";
 import {Link} from "react-router-dom";
-import {PATH_ESCROW_MANAGE} from "../../constants/router.ts";
+import {PATH_ESCROW_CREATE, PATH_ESCROW_MANAGE} from "../../constants/router.ts";
 
 const PreviewBlocks: React.FC = () => {
 	return (
@@ -29,9 +29,11 @@ const PreviewBlocks: React.FC = () => {
 					</p>
 
 					<div className="btn-container">
-						<button className="btn-gradient">
-							Create new Escrow
-						</button>
+						<Link to={PATH_ESCROW_CREATE}>
+							<button className="btn-gradient">
+								Create new Escrow
+							</button>
+						</Link>
 
 						<Link to={PATH_ESCROW_MANAGE}>
 							<button className="btn-border-white">

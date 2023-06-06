@@ -1,16 +1,13 @@
 import React from 'react';
 import "./EscrowManagePage.css";
-import NavbarEscrow from "../../components/NavbarEscrow/NavbarEscrow.tsx";
-import OffcanvasWallet from "../../components/OffcanvasWallet/OffcanvasWallet.tsx";
 import EscrowHistory from "../../components/EscrowHistory/EscrowHistory.tsx";
+import EscrowContainer from "../../components/EscrowContainer/EscrowContainer.tsx";
 
 const EscrowManagePage: React.FC = () => {
 	return (
-		<div className={"EscrowManagePage"}>
-			<NavbarEscrow />
-			<OffcanvasWallet />
+		<EscrowContainer className={'EscrowManagePage'}>
 			<EscrowHistory />
-		</div>
+		</EscrowContainer>
 	);
 };
 

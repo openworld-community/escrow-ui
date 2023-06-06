@@ -76,7 +76,7 @@
     padding: 1em 3em;
     font-weight: 600;
 }
-.PreviewBlocks .block.main .btn-container button:first-child{
+.PreviewBlocks .block.main .btn-container a:first-child{
     margin-right: 1em;
 }
 

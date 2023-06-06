@@ -1,12 +1,1 @@
-.EscrowPage{
-    width: 100%;
-    height: 100vh;
-    min-height: 600px;
-    padding: var(--escrow-padding);
 
-    background-color: var(--app-dark);
-    background-image: url("/images/backgrounds/bg-main.svg");
-    background-size: contain;
-    background-position: left center;
-    background-repeat: no-repeat;
-}
