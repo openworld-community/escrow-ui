@@ -1,6 +1,7 @@
 import React from 'react';
 import "./EscrowCreateInner.css";
 import EscrowProgress from "../EscrowProgress/EscrowProgress.tsx";
+import EscrowChat from "../EscrowChat/EscrowChat.tsx";
 
 interface IEscrowCreateInner {
 	children: React.ReactNode,
@@ -22,6 +23,7 @@ const EscrowCreateInner: React.FC<IEscrowCreateInner> = ({ children, title, perc
 			</div>
 
 			{/*chat*/}
+			<EscrowChat />
 		</div>
 	);
 };

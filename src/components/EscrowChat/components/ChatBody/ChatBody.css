@@ -1,0 +1,14 @@
+.ChatBody{
+    height: 100%;
+    padding: 15px var(--chat-px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    overflow-y: auto;
+}
+/*scrollbar*/
+.ChatBody::-webkit-scrollbar {
+    display: none;
+}

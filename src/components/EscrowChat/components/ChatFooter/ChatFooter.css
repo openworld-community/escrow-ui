@@ -1,0 +1,44 @@
+.ChatFooter{
+    width: 100%;
+    position: relative;
+}
+
+.ChatFooter form{
+    width: 100%;
+}
+
+.ChatFooter input{
+    width: 100%;
+    padding: 15px var(--chat-px);
+
+    color: var(--bs-white);
+    outline: none;
+    border: none;
+    border-top: 2px solid var(--app-chat-border);
+    background: none;
+    border-radius: 0 0 var(--def-radius) var(--def-radius);
+}
+.ChatFooter input::placeholder{
+    color: var(--app-gray);
+}
+
+.ChatFooter button{
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 20px);
+
+    border-radius: 15px;
+    background: none;
+    border: none;
+    transition: .15s;
+}
+.ChatFooter button:hover{
+    background: rgba(41, 50, 61, 0.1);
+}

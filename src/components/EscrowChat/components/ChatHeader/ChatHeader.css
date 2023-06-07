@@ -1,0 +1,27 @@
+.ChatHeader{
+    padding: var(--chat-py) var(--chat-px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 2px solid var(--app-chat-border);
+}
+
+/*user*/
+.ChatHeader .user{
+    display: flex;
+    align-items: center;
+}
+.ChatHeader .user img{
+    width: 30px;
+    margin-right: 10px;
+    border-radius: 30px;
+}
+.ChatHeader .user p{
+    margin: 0;
+}
+.ChatHeader .user p span{
+    margin-left: .25em;
+    color: var(--app-gray-op-25);
+}

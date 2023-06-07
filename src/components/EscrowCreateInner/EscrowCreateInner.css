@@ -1,6 +1,5 @@
 .EscrowCreateInner{
     /*vars*/
-    --block-width: 400px;
     --height: 600px;
 
     position: relative;

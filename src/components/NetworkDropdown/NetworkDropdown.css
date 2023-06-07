@@ -1,4 +1,4 @@
-.NetworkDropdown .dropdown-menu a.dropdown-item{
+.NetworkDropdown.def-dropdown .dropdown-menu a.dropdown-item{
     padding-left: 7px;
     justify-content: flex-start;
 }

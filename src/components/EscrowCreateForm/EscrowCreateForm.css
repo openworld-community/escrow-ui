@@ -11,7 +11,7 @@
 
 .EscrowCreateForm .block{
     height: auto;
-    margin-top: 2em;
+    margin-top: 1.5em;
 
     display: flex;
     flex-direction: column;
@@ -44,7 +44,7 @@
     margin-bottom: .3em;
 }
 
-/*button*/
+/*button container*/
 .EscrowCreateForm .btn-container{
     width: 100%;
     display: flex;
@@ -52,7 +52,7 @@
 }
 .EscrowCreateForm .btn-container button{
     width: 25%;
-    margin: 2em .5em;
+    margin: 2em .5em 0;
     padding: .75em 3em;
 }
 

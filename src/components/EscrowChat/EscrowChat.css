@@ -1,0 +1,16 @@
+.EscrowChat{
+    /*vars*/
+    --chat-py: 25px;
+    --chat-px: 30px;
+
+    /*styles*/
+    width: var(--chat-width);
+    height: inherit;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-radius: var(--def-radius);
+    border: 2px solid #29323D;
+}

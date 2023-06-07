@@ -1,0 +1,78 @@
+.ChatMessage{
+    width: 100%;
+    margin-bottom: .5em;
+
+    position: relative;
+    display: flex;
+}
+
+/*placement*/
+.ChatMessage.left,
+.ChatMessage.right{
+    width: 100%;
+    background: none;
+}
+.ChatMessage.left{
+    justify-content: flex-start;
+}
+.ChatMessage.right{
+    justify-content: flex-end;
+}
+.ChatMessage.right::after{
+    border: 20px solid transparent;
+    border-top: 20px solid green;
+    border-right: 20px solid green;
+}
+
+/*inner*/
+.ChatMessage .message{
+    width: auto;
+    max-width: 80%;
+    padding: 7px 14px;
+
+    display: flex;
+    flex-direction: column;
+
+    border: none;
+}
+
+/*left*/
+.ChatMessage.left .message{
+    background: #384050;
+    border-radius: 0 6px 6px 6px;
+}
+.ChatMessage.left .message::after{
+    content: '';
+    position: absolute;
+    left: -11px;
+    top: 1px;
+    border: 6px solid transparent;
+    border-top: 6px solid #384050;
+    border-right: 6px solid #384050;
+}
+
+/*right*/
+.ChatMessage.right .message{
+    background: #1B1F2A;
+    border-radius: 6px 0 6px 6px;
+}
+.ChatMessage.right .message::after{
+    content: '';
+    position: absolute;
+    right: -12px;
+    top: 0;
+    border: 6px solid transparent;
+    border-left: 6px solid #1B1F2A;
+    border-top: 6px solid #1B1F2A;
+}
+
+/*text*/
+.ChatMessage p{
+    margin: 0;
+}
+.ChatMessage p.small.date{
+    width: 100%;
+    font-size: 11px;
+    text-align: right;
+    opacity: .5;
+}

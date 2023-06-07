@@ -1,3 +1,4 @@
+/*border dark gray input*/
 .outline-gray-input{
     padding: .5em .75em;
     border: 1px solid var(--app-gray-op-25);
@@ -13,4 +14,18 @@
 }
 .outline-gray-input::placeholder{
     color: var(--app-gray-op-25);
+}
+
+/*select*/
+select.outline-gray-input.form-select{
+    box-shadow: none;
+    position: relative;
+    display: inline-block;
+    appearance: none;
+    overflow: hidden;
+    background: url('/images/icons/down-arrow.svg') no-repeat 95%;
+}
+select.outline-gray-input:hover,
+select.outline-gray-input:focus{
+    background: url('/images/icons/down-arrow-white.svg') no-repeat 95%;
 }
