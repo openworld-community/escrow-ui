@@ -1,0 +1,33 @@
+.EscrowCheckBlock{
+    width: 100%;
+    margin-bottom: 2em;
+    display: flex;
+    align-items: flex-start;
+}
+
+/*line*/
+.EscrowCheckBlock .line{
+    width: 2px;
+    height: 15px;
+
+    border-radius: 5px;
+    background: linear-gradient(93.26deg, #FF1CF7 -1.33%, #00F0FF 100%);
+}
+
+.EscrowCheckBlock .content{
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.EscrowCheckBlock .content p{
+    margin: 0 0 .75em 0;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.EscrowCheckBlock .content p.dark{
+    color: var(--app-gray);
+    cursor: pointer;
+}

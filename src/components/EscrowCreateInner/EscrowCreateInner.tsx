@@ -5,7 +5,7 @@ import EscrowChat from "../EscrowChat/EscrowChat.tsx";
 
 interface IEscrowCreateInner {
 	children: React.ReactNode,
-	title: string,
+	title?: string,
 	percentage: number,
 }
 
@@ -16,7 +16,7 @@ const EscrowCreateInner: React.FC<IEscrowCreateInner> = ({ children, title, perc
 				<div className="inner">
 					<EscrowProgress percentage={percentage} />
 
-					<h2 className={"title"}>{title}</h2>
+					{title && <h2 className={"title"}>{title}</h2>}
 
 					{children}
 				</div>

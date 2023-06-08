@@ -1,0 +1,44 @@
+.NavbarTop{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+/*container*/
+.NavbarTop .container{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*logo*/
+.NavbarTop .container img.logo{
+    width: 40px;
+    height: auto;
+}
+
+/*links*/
+/*for center nav*/
+.NavbarTop .container nav{
+    margin-right: -100px;
+}
+.NavbarTop .container nav a{
+    margin: 0 1.75em;
+    color: var(--app-light-gray);
+    text-decoration: none;
+    transition: .25s;
+}
+.NavbarTop .container nav a:hover{
+    color: var(--bs-white);
+}
+
+/*social*/
+.NavbarTop .container .socila-icons a{
+    margin-left: 12px;
+}
+.NavbarTop .container .socila-icons a img{
+
+}

@@ -24,3 +24,7 @@
 * {
     font-family: 'Inter', sans-serif;
 }
+
+body {
+    /*overflow-y: hidden; !*dev*!*/
+}

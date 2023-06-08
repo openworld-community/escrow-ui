@@ -1,0 +1,26 @@
+.EscrowCheckInner{
+    width: 100%;
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*blocks container*/
+.EscrowCheckInner .blocks-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.EscrowCheckInner .blocks-container .col{
+    width: calc(33.333% - 1em);
+}
+
+/*btns-container*/
+.EscrowCheckInner .btns-container button{
+    padding: 1em 3em;
+}
+.EscrowCheckInner .btns-container button:first-child{
+    margin-right: 1em;
+}

@@ -1,8 +1,8 @@
-// import React from 'react';
+import React from 'react';
 import "./FullPageLoader.css";
 import {Spinner} from "react-bootstrap";
 
-const FullPageLoader = () => {
+const FullPageLoader: React.FC = () => {
 	return (
 		<div className={'FullPageLoader'}>
 			<Spinner />

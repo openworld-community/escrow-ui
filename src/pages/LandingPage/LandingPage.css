@@ -1,0 +1,4 @@
+.LandingPage {
+    min-height: 100vh;
+    background: var(--app-dark);
+}

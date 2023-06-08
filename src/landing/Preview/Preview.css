@@ -1,0 +1,50 @@
+.Preview{
+    height: calc(100vh + 100px);
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url("/images/backgrounds/landing-preview-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+/*content*/
+.Preview .content{
+    width: 750px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--bs-white);
+    text-align: center;
+}
+
+/*text*/
+.Preview .content h1{
+    margin-bottom: .4em;
+    font-size: 72px;
+    font-weight: 800;
+
+    display: flex;
+    flex-direction: column;
+}
+.Preview .content h1 span{
+    max-width: max-content;
+    background: var(--app-primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Preview .content p{
+    margin-bottom: 4em;
+}
+
+/*btn*/
+.Preview .content button{
+    padding: 1em 5em;
+}

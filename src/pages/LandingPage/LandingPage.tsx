@@ -1,9 +1,13 @@
 import React from 'react';
+import "./LandingPage.css";
+import NavbarTop from "../../landing/NavbarTop/NavbarTop.tsx";
+import Preview from "../../landing/Preview/Preview.tsx";
 
 const LandingPage: React.FC = () => {
 	return (
-		<div>
-			<h1>Landing page</h1>
+		<div className={"LandingPage"}>
+			<NavbarTop />
+			<Preview />
 		</div>
 	);
 };
