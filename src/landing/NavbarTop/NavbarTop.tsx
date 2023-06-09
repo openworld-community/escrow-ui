@@ -2,18 +2,28 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import {Container} from "react-bootstrap";
 import "./NavbarTop.css";
+import {
+	PATH_LANDING,
+	PATH_LANDING_COMMUNITY,
+	PATH_LANDING_DEVELOPERS,
+	PATH_LANDING_ECOSYSTEM,
+	PATH_LANDING_FAQ
+} from "../../constants/router.ts";
 
 const NavbarTop: React.FC = () => {
+
 	return (
 		<div className={"NavbarTop"}>
 			<Container>
-				<img src={"/images/logo.svg"} alt={"PEREDELANO"} className={"logo"} />
+				<Link to={PATH_LANDING}>
+					<img src={"/images/logo.svg"} alt={"PEREDELANO"} className={"logo"} />
+				</Link>
 
 				<nav>
-					<Link to={"/"}>Ecosystem</Link>
-					<Link to={"/"}>Community</Link>
-					<Link to={"/"}>Developers</Link>
-					<Link to={"/"}>FAQ</Link>
+					<Link to={PATH_LANDING_ECOSYSTEM}>Ecosystem</Link>
+					<Link to={PATH_LANDING_COMMUNITY}>Community</Link>
+					<Link to={PATH_LANDING_DEVELOPERS}>Developers</Link>
+					<Link to={PATH_LANDING_FAQ}>FAQ</Link>
 				</nav>
 
 				<div className="socila-icons">

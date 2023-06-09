@@ -42,6 +42,9 @@
 /*label*/
 .EscrowCreateForm .block label{
     margin-bottom: .3em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 /*button container*/

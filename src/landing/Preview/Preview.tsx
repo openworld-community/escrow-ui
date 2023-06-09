@@ -1,5 +1,7 @@
 import React from 'react';
 import "./Preview.css";
+import {Link} from "react-router-dom";
+import {PATH_ESCROW} from "../../constants/router.ts";
 
 const Preview: React.FC = () => {
 	return (
@@ -17,9 +19,11 @@ const Preview: React.FC = () => {
 					unlimited speeds.
 				</p>
 
-				<button className={"btn-border-gradient"}>
-					Launch App
-				</button>
+				<Link to={PATH_ESCROW}>
+					<button className={"btn-border-gradient"}>
+						Launch App
+					</button>
+				</Link>
 			</div>
 		</div>
 	);

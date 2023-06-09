@@ -1,4 +1,3 @@
-
 export const PATH_ESCROW = '/escrow';
 export const PATH_ESCROW_MANAGE = '/escrow/manage';
 export const PATH_ESCROW_CREATE = '/escrow/create';
@@ -6,3 +5,7 @@ export const PATH_ESCROW_CHECK = '/escrow/check/:person';
 export const PATH_ESCROW_CANCEL = '/escrow/cancel';
 export const PATH_ESCROW_SUCCESS = '/escrow/success';
 export const PATH_LANDING = '/';
+export const PATH_LANDING_ECOSYSTEM = '/ecosystem';
+export const PATH_LANDING_COMMUNITY = '/community';
+export const PATH_LANDING_DEVELOPERS = '/developers';
+export const PATH_LANDING_FAQ = '/faq';

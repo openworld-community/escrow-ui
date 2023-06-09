@@ -2,16 +2,22 @@ import React from 'react';
 import "./FooterBottom.css";
 import {Container} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import {
+	PATH_LANDING_COMMUNITY,
+	PATH_LANDING_DEVELOPERS,
+	PATH_LANDING_ECOSYSTEM,
+	PATH_LANDING_FAQ
+} from "../../constants/router.ts";
 
 const FooterBottom: React.FC = () => {
 	return (
 		<Container className={"FooterBottom"}>
 			<div className="top">
 				<nav>
-					<Link to={"/"}>Ecosystem</Link>
-					<Link to={"/"}>Community</Link>
-					<Link to={"/"}>Developers</Link>
-					<Link to={"/"}>FAQ</Link>
+					<Link to={PATH_LANDING_ECOSYSTEM}>Ecosystem</Link>
+					<Link to={PATH_LANDING_COMMUNITY}>Community</Link>
+					<Link to={PATH_LANDING_DEVELOPERS}>Developers</Link>
+					<Link to={PATH_LANDING_FAQ}>FAQ</Link>
 				</nav>
 
 				<div className="socila-icons">

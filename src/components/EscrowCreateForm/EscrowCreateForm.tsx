@@ -42,7 +42,7 @@ const EscrowCreateForm: React.FC = () => {
 				<div className="block fee horizontal w30">
 					<p>
 						Fee payment:
-						<span>0.000785294320 ETH</span>
+						<span>0.0785 ETH</span>
 					</p>
 				</div>
 			</div>
