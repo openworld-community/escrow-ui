@@ -1,0 +1,48 @@
+.FooterBottom{
+    margin-top: 5em;
+    padding-bottom: 1.5em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    color: var(--bs-white);
+}
+
+/*top*/
+.FooterBottom .top{
+    width: 100%;
+    margin-bottom: 2em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.FooterBottom .top nav a{
+    margin-right: 5em;
+    text-decoration: none;
+    color: var(--bs-white);
+}
+
+/*socila-icons*/
+.FooterBottom .top .socila-icons a{
+    margin-left: .5em;
+}
+.FooterBottom .top .socila-icons a img{
+    width: 23px;
+}
+
+/*bottom*/
+.FooterBottom .bottom p{
+    color: var(--app-light-gray);
+}
+
+.FooterBottom .bottom a{
+    margin-left: 12px;
+    color: var(--app-light-gray);
+    transition: .25s;
+}
+.FooterBottom .bottom a:hover{
+    color: var(--bs-white);
+}

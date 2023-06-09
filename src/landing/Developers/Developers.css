@@ -1,0 +1,88 @@
+.Developers{
+    padding-top: -7.5em;
+    padding-bottom: 5em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/*link*/
+.Developers a{
+    margin-bottom: .75em;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--app-gray);
+    font-weight: 300;
+    text-decoration: none;
+}
+.Developers a img{
+    margin-left: .25em;
+}
+
+/*container for blocks*/
+.Developers .blocks-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*block*/
+.Developers .blocks-container .block{
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    color: var(--bs-white);
+    border: 2px solid #29323D;
+    border-radius: var(--def-radius);
+}
+
+.Developers .blocks-container .block.left{
+    width: calc(100% - 450px - 1em);
+    padding: 20px 40px;
+
+    background-color: var(--app-dark);
+    background-image: url("/images/backgrounds/dev-block-bg.svg");
+}
+
+.Developers .blocks-container .block.right{
+    width: 450px;
+    padding: 25px;
+
+    background: linear-gradient(106.82deg, rgba(113, 109, 125, 0.1) 0%, rgba(0, 15, 255, 0) 113.61%);
+    backdrop-filter: blur(5px);
+}
+
+/*text*/
+.Developers .blocks-container .block h5{
+    font-weight: 300;
+    color: var(--app-light-gray);
+    line-height: 1.4;
+}
+
+.Developers .blocks-container .block.left h1{
+    max-width: 75%;
+    margin-bottom: .5em;
+
+    font-weight: 400;
+}
+
+.Developers .blocks-container .block.right h3{
+    margin-bottom: .75em;
+    font-weight: 400;
+}
+
+.Developers .blocks-container .block.right h5{
+    margin-bottom: 2em;
+}
+
+/*button*/
+.Developers .blocks-container .block.right button{
+    padding: .6em 3.5em;
+}

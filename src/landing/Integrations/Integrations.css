@@ -1,0 +1,51 @@
+.Integrations{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.Integrations img.bg{
+    width: 70%;
+}
+
+/*container*/
+.Integrations .container{
+    position: absolute;
+    left: calc((100% - 1320px) / 2);
+}
+
+/*content*/
+.Integrations .container .content{
+    width: 45%;
+
+    display: flex;
+    flex-direction: column;
+
+    color: var(--bs-white);
+}
+
+/*text*/
+.Integrations .container .content a{
+    margin-bottom: .4em;
+
+    color: var(--app-gray);
+    text-decoration: none;
+    font-weight: 300;
+
+    display: flex;
+    align-items: center;
+}
+.Integrations .container .content a img{
+    margin-left: .25em;
+}
+
+.Integrations .container .content h1{
+    margin-bottom: .6em;
+    font-weight: 400;
+}
+
+.Integrations .container .content h5{
+    color: var(--app-light-gray);
+    font-weight: 300;
+    line-height: 1.4;
+}

@@ -1,0 +1,30 @@
+.QuantityTrades{
+    margin-top: -65px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*block*/
+.QuantityTrades .block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--bs-white);
+}
+
+/*text*/
+.QuantityTrades .block span{
+    margin-bottom: .025em;
+
+    line-height: 1;
+    font-size: 72px;
+    font-weight: 800;
+}
+
+.QuantityTrades .block p{
+    margin-bottom: 0;
+
+    font-weight: 300;
+    color: var(--app-light-gray);
+}
