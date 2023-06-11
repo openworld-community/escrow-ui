@@ -5,7 +5,11 @@ import {switchShow} from "../../store/slices/offcanvasWalletSlice.ts";
 import "./OffcanvasWallet.css";
 import SelectWallet from "./components/SelectWallet/SelectWallet.tsx";
 
+// let web3: Web3 | undefined = undefined;
+
 const OffcanvasWallet: React.FC = () => {
+
+	// const [loader, setLoader] = useState<boolean>(false);
 
 	const dispatch = useAppDispatch();
 	const show = useAppSelector(state  => state.offcanvasWallet.show);

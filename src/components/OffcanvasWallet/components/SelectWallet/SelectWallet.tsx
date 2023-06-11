@@ -1,38 +1,37 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./SelectWallet.css";
 import {SelectWalletData} from "./SelectWalletData.ts";
-import {OverlayTrigger, Tooltip} from "react-bootstrap";
+import SelectWalletItem from "./components/SelectWalletItem/SelectWalletItem.tsx";
+import {Alert} from "react-bootstrap";
 
 const SelectWallet: React.FC = () => {
 
-	const getTooltip = () => {
-		return (
-			<Tooltip>Service disable now!</Tooltip>
-		)
-	}
+	const [web3enable, setWeb3enable] = useState(true);
 
 	return (
 		<div className={'SelectWallet'}>
 			<p className="small">
-				If you connect with one of the wallets below, make sure you read and agree to Vector DeFi Terms of Service. Store your private keys or seed phrase securely, and never share them with anyone.
+				If you connect with one of the wallets below, make sure you read
+				and agree to Vector DeFi Terms of Service. Store your private
+				keys or seed phrase securely, and never share them with anyone.
 			</p>
+
+			{
+				!web3enable &&
+				<Alert variant={"danger"} className={"p-2 my-2 text-center small"}>
+					You need to allow MetaMask and activate it first.
+					After allow the metamask please reload the page.
+				</Alert>
+			}
 
 			<div className="select-container">
 				{
 					SelectWalletData.map(elem => (
-						elem.disabled ?
-							<OverlayTrigger key={elem.id} overlay={getTooltip()}>
-                                <span className="overlay-block d-inline-block">
-									<button disabled style={{ pointerEvents: 'none' }} className={"block"}>
-										<img src={elem.image} alt={elem.title}/>
-										<p className={"small"}>{elem.title}</p>
-									</button>
-                                </span>
-							</OverlayTrigger>:
-							<button key={elem.id} className={"block"}>
-								<img src={elem.image} alt={elem.title}/>
-								<p className={"small"}>{elem.title}</p>
-							</button>
+						<SelectWalletItem
+							key={elem.id}
+							data={elem}
+							setWeb3disable={() => setWeb3enable(false)}
+						/>
 					))
 				}
 			</div>
