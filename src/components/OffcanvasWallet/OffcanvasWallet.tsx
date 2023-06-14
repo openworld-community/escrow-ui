@@ -4,15 +4,13 @@ import {useAppDispatch, useAppSelector} from "../../store/store.ts";
 import {switchShow} from "../../store/slices/offcanvasWalletSlice.ts";
 import "./OffcanvasWallet.css";
 import SelectWallet from "./components/SelectWallet/SelectWallet.tsx";
-
-// let web3: Web3 | undefined = undefined;
+import UserProfile from "./components/UserProfile/UserProfile.tsx";
 
 const OffcanvasWallet: React.FC = () => {
 
-	// const [loader, setLoader] = useState<boolean>(false);
-
 	const dispatch = useAppDispatch();
 	const show = useAppSelector(state  => state.offcanvasWallet.show);
+	const user = useAppSelector(state  => state.user.data);
 
 	return (
 		<Offcanvas
@@ -27,12 +25,14 @@ const OffcanvasWallet: React.FC = () => {
 
 			<div className="inner">
 				<Offcanvas.Header>
-					<h5>Connect a wallet</h5>
+					{!user && <h5>Connect a wallet</h5>}
+					{user && <h5>User profile</h5>}
 					<CloseButton onClick={() => dispatch(switchShow())} variant={"white"} />
 				</Offcanvas.Header>
 
 				<Offcanvas.Body>
-					<SelectWallet />
+					{!user && <SelectWallet />}
+					{user && <UserProfile data={user} />}
 				</Offcanvas.Body>
 
 			</div>

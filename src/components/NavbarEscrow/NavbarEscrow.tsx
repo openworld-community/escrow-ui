@@ -1,7 +1,7 @@
 import React from 'react';
 import "./NavbarEscrow.css";
 import {Link} from "react-router-dom";
-import {useAppDispatch} from "../../store/store.ts";
+import {useAppDispatch, useAppSelector} from "../../store/store.ts";
 import {switchShow} from "../../store/slices/offcanvasWalletSlice.ts";
 import LangDropdown from "../LangDropdown/LangDropdown.tsx";
 import NetworkDropdown from "../NetworkDropdown/NetworkDropdown.tsx";
@@ -15,6 +15,7 @@ import {
 const NavbarEscrow: React.FC = () => {
 
 	const dispatch = useAppDispatch();
+	const user = useAppSelector(state => state.user.data);
 
 	return (
 		<nav className={"NavbarEscrow"}>
@@ -34,9 +35,16 @@ const NavbarEscrow: React.FC = () => {
 			<div className="right">
 				<NetworkDropdown />
 				<LangDropdown />
-				<button onClick={() => dispatch(switchShow())} className="btn-border-gradient">
-					Connect Wallet
-				</button>
+				{
+					user ?
+						<button onClick={() => dispatch(switchShow())} className={"user"}>
+							<img src={user.avatar} alt={user.username}/>
+							<p>{user.address?.toUpperCase()}</p>
+						</button>:
+						<button onClick={() => dispatch(switchShow())} className="btn-border-gradient">
+							Connect Wallet
+						</button>
+				}
 			</div>
 		</nav>
 	);

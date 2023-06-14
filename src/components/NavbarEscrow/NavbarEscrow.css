@@ -37,6 +37,39 @@
     color: var(--bs-white);
 }
 
-/*button*/
-.NavbarEscrow .right button {
+/*button default*/
+.NavbarEscrow .right button.btn-border-gradient {
+}
+
+/*button user*/
+.NavbarEscrow .right button.user {
+    width: 200px;
+    padding: .55em 1.25em;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 50px;
+    border: none;
+    background: var(--app-dark-second);
+    color: var(--bs-white);
+    transition: .15s;
+}
+.NavbarEscrow .right button.user:hover{
+    background: var(--app-chat-border);
+}
+.NavbarEscrow .right button.user img{
+    width: 26px;
+    height: 26px;
+    margin-right: .75em;
+
+    border-radius: 50%;
+}
+.NavbarEscrow .right button.user p{
+    margin: 0;
+
+    line-height: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

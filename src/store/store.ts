@@ -12,10 +12,12 @@ import {
 	persistReducer
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import userSlice from "./slices/userSlice.ts";
 
 
 const rootReducer = combineReducers({
 	offcanvasWallet: offcanvasWalletSlice,
+	user: userSlice,
 });
 
 const persistConfig = {

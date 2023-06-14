@@ -20,6 +20,8 @@ const SelectWallet: React.FC = () => {
 				!web3enable &&
 				<Alert variant={"danger"} className={"p-2 my-2 text-center small"}>
 					You need to allow MetaMask and activate it first.
+					Then to sign the message to be able to log in.
+					<hr />
 					After allow the metamask please reload the page.
 				</Alert>
 			}
