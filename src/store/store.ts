@@ -1,6 +1,5 @@
 import {configureStore, combineReducers} from "@reduxjs/toolkit";
 import {TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";
-import offcanvasWalletSlice from "./slices/offcanvasWalletSlice.ts";
 import {
 	FLUSH,
 	REHYDRATE,
@@ -12,12 +11,17 @@ import {
 	persistReducer
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+
+//slices
+import offcanvasWalletSlice from "./slices/offcanvasWalletSlice.ts";
 import userSlice from "./slices/userSlice.ts";
+import formCreateSlice from "./slices/formCreateSlice.ts";
 
 
 const rootReducer = combineReducers({
 	offcanvasWallet: offcanvasWalletSlice,
 	user: userSlice,
+	formCreate: formCreateSlice,
 });
 
 const persistConfig = {

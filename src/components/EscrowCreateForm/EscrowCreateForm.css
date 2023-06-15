@@ -27,10 +27,10 @@
 
 /*width*/
 .EscrowCreateForm .w20{
-    width: calc(20% - .5em);
+    width: calc(20% - .25em);
 }
 .EscrowCreateForm .w30{
-    width: calc(30% - .5em);
+    width: calc(30% - .25em);
 }
 .EscrowCreateForm .w50{
     width: calc(50% - .5em);

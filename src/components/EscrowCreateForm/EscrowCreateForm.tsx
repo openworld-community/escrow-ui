@@ -1,71 +1,99 @@
-import React from 'react';
+import React, {FormEvent} from 'react';
 import "./EscrowCreateForm.css";
 import CreateFormSelect from "./components/CreateFormSelect/CreateFormSelect.tsx";
 import {RoleData} from "./data/RoleData.ts";
 import {FeeData} from "./data/FeeData.ts";
-import { Form } from "react-bootstrap";
+import {useAppDispatch, useAppSelector} from "../../store/store.ts";
+import {setFormData} from "../../store/slices/formCreateSlice.ts";
+import {Form} from "react-bootstrap";
 
 const EscrowCreateForm: React.FC = () => {
 
+	const dispatch = useAppDispatch();
+	const formData = useAppSelector(state => state.formCreate.formData);
+
+	const setRole = (role: 'seller'|'bayer') => {
+		dispatch(setFormData({...formData, role: role}))
+	}
+
+	const handleSend = (e:FormEvent) => {
+		e.preventDefault();
+		console.log(formData)
+	}
+
 	return (
-		<div className={"EscrowCreateForm"}>
+		<Form onSubmit={handleSend} className={"EscrowCreateForm"}>
 			<div className="block w50">
 				<label>Select Role</label>
-				<CreateFormSelect data={RoleData} />
+				<CreateFormSelect data={RoleData} handleChange={setRole} activeValue={formData.role} />
 			</div>
 
 			<div className="block w50">
-				<label>Select Fee payment</label>
+				<label>Select Fee payment (Disabled now)</label>
 				<CreateFormSelect data={FeeData} />
 			</div>
 
 			<div className="block horizontal w100">
 				<div className="block w20">
-					<label>Auto Release Wait Days</label>
-					<input className={"outline-gray-input ml"} />
+					<label>Auto Release Wait Hours</label>
+					<input
+						required
+						type={"number"}
+						min={1}
+						placeholder={"Minimum Waiting - 1 Hour"}
+						className={"outline-gray-input ml"}
+						value={formData.expirationDays || ""}
+						onChange={e => dispatch(setFormData({...formData, expirationDays: +e.target.value}))}
+					/>
 				</div>
 
 				<div className="block w30">
-					<label>Value</label>
-					<input className={"outline-gray-input ml"} />
+					<label>Value (ETH)</label>
+					<input
+						required
+						className={"outline-gray-input ml"}
+						value={formData.value || ""}
+						onChange={e => dispatch(setFormData({...formData, value: e.target.value}))}
+					/>
 				</div>
 
-				<div className="block m-0 w20">
-					<label>Unit</label>
-					<Form.Select className={"outline-gray-input"}>
-						<option value="1">One</option>
-						<option value="2">Two</option>
-						<option value="3">Three</option>
-					</Form.Select>
-				</div>
-
-				<div className="block fee horizontal w30">
+				<div className="block fee horizontal w50">
 					<p>
 						Fee payment:
-						<span>0.0785 ETH</span>
+						<span>0.000 ETH (Free now)</span>
 					</p>
 				</div>
 			</div>
 
 			<div className="block w50">
 				<label>Seller Address</label>
-				<input className={"outline-gray-input"} />
+				<input
+					required
+					className={"outline-gray-input"}
+					value={formData.seller}
+					onChange={e => dispatch(setFormData({...formData, seller: e.target.value}))}
+				/>
 			</div>
 
 			<div className="block w50">
 				<label>Bayer Address</label>
-				<input className={"outline-gray-input"} />
+				<input
+					required
+					className={"outline-gray-input"}
+					value={formData.bayer}
+					onChange={e => dispatch(setFormData({...formData, bayer: e.target.value}))}
+				/>
 			</div>
 
 			<div className="btn-container">
 				<button className={"btn-border-white"}>
 					Get back
 				</button>
-				<button className={"btn-gradient"}>
+				<button type={"submit"} className={"btn-gradient"}>
 					Review Escrow
 				</button>
 			</div>
-		</div>
+		</Form>
 	);
 };
 

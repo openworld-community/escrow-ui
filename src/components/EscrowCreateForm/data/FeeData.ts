@@ -12,6 +12,6 @@ export const FeeData = [
 	{
 		title: '50/50',
 		value: 'mutually',
-		active: true,
+		active: false,
 	},
 ];

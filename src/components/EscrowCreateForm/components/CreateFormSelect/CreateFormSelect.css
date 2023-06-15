@@ -22,6 +22,9 @@
 .CreateFormSelect button:disabled{
     background: var(--app-primary-gradient);
 }
+.CreateFormSelect button.banned{
+    cursor: not-allowed;
+}
 .CreateFormSelect button .inner-btn{
     width: 100%;
     padding: .5em;
@@ -37,6 +40,10 @@
 .CreateFormSelect button:hover{
     background: var(--bs-white);
     color: var(--bs-white);
+}
+.CreateFormSelect button.banned:hover{
+    color: var(--app-gray-op-25);
+    background: var(--app-gray-op-25);
 }
 .CreateFormSelect button:disabled{
     color: var(--bs-white);

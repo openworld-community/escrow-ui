@@ -1,12 +1,15 @@
-export const RoleData = [
+export interface ISelectRole {
+	title: string,
+	value: string,
+}
+
+export const RoleData: ISelectRole[] = [
 	{
 		title: 'Seller',
-		value: 'sell',
-		active: true,
+		value: 'seller',
 	},
 	{
 		title: 'Bayer',
-		value: 'buy',
-		active: false,
+		value: 'bayer',
 	},
 ];

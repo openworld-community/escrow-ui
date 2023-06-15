@@ -1,26 +1,30 @@
 import React from 'react';
 import "./CreateFormSelect.css";
-
-interface ISelect {
-	title: string,
-	value: string,
-	active: boolean
-}
+import {ISelectRole} from "../../data/RoleData.ts";
 
 interface ICreateFormSelect {
-	data: ISelect[],
+	data: ISelectRole[],
+	handleChange?: (value: any) => void,
+	activeValue?: string,
 }
 
-const CreateFormSelect: React.FC<ICreateFormSelect> = ({ data }) => {
+const CreateFormSelect: React.FC<ICreateFormSelect> = ({ data, handleChange, activeValue }) => {
 	return (
 		<div className={"CreateFormSelect"}>
 			{
 				data.map(elem => (
-					<button key={elem.value} disabled={elem.active}>
-						<div className="inner-btn">
-							{elem.title}
-						</div>
-					</button>
+					handleChange ?
+						<button
+							//@ts-ignore
+							onClick={() => handleChange(elem.value)}
+							key={elem.value}
+							disabled={elem.value === activeValue}
+						>
+							<div className="inner-btn">{elem.title}</div>
+						</button>:
+						<button type={"button"} key={elem.value} disabled={false} className={"banned"}>
+							<div className="inner-btn">{elem.title}</div>
+						</button>
 				))
 			}
 		</div>
