@@ -40,7 +40,7 @@ const EscrowCreateForm: React.FC = () => {
 						required
 						type={"number"}
 						min={1}
-						placeholder={"Minimum Waiting - 1 Hour"}
+						placeholder={"Min - 1 Hour"}
 						className={"outline-gray-input ml"}
 						value={formData.expirationDays || ""}
 						onChange={e => dispatch(setFormData({...formData, expirationDays: +e.target.value}))}

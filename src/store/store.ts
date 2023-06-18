@@ -26,6 +26,7 @@ const rootReducer = combineReducers({
 
 const persistConfig = {
 	key: 'root',
+	blacklist: ['offcanvasWallet','formCreate'],
 	storage: storage,
 }
 
