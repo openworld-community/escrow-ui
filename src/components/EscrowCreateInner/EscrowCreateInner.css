@@ -6,7 +6,6 @@
 
     width: 100%;
     height: var(--height);
-    margin-top: calc(((100vh - var(--height)) / 2) - var(--logo-height));
 
     color: var(--bs-white);
 

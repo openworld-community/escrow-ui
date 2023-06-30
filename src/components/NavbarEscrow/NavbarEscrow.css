@@ -1,6 +1,7 @@
 .NavbarEscrow{
     width: 100%;
     height: auto;
+    margin-bottom: 2em;
 
     display: flex;
     justify-content: space-between;

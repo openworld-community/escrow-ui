@@ -6,11 +6,14 @@ import {FeeData} from "./data/FeeData.ts";
 import {useAppDispatch, useAppSelector} from "../../store/store.ts";
 import {setFormData} from "../../store/slices/formCreateSlice.ts";
 import {Form} from "react-bootstrap";
+import {useNavigate} from "react-router-dom";
+import {PATH_ESCROW} from "../../constants/router.ts";
 
 const EscrowCreateForm: React.FC = () => {
 
 	const dispatch = useAppDispatch();
 	const formData = useAppSelector(state => state.formCreate.formData);
+	const navigate = useNavigate();
 
 	const setRole = (role: 'seller'|'bayer') => {
 		dispatch(setFormData({...formData, role: role}))
@@ -51,6 +54,7 @@ const EscrowCreateForm: React.FC = () => {
 					<label>Value (ETH)</label>
 					<input
 						required
+						placeholder={"0.0001 ETH"}
 						className={"outline-gray-input ml"}
 						value={formData.value || ""}
 						onChange={e => dispatch(setFormData({...formData, value: e.target.value}))}
@@ -86,7 +90,7 @@ const EscrowCreateForm: React.FC = () => {
 			</div>
 
 			<div className="btn-container">
-				<button className={"btn-border-white"}>
+				<button onClick={() => navigate(PATH_ESCROW)} type={"button"} className={"btn-border-white"}>
 					Get back
 				</button>
 				<button type={"submit"} className={"btn-gradient"}>

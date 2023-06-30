@@ -5,7 +5,6 @@
     /*styles*/
     width: 100%;
     height: var(--height);
-    margin-top: calc(((100vh - var(--height)) / 2) - var(--logo-height));
     padding: 1px;
 
     background: var(--app-border-gradient);
